@@ -84,6 +84,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if (true) {}
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -106,4 +107,4 @@ module.exports = {
   esEntero,
   fizzBuzz,
   esPrimo
-};
+}
