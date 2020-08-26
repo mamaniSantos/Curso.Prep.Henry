@@ -19,23 +19,24 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
-  if(idioma==="aleman"){
-    return "Guten tag!";
+  if(idioma!=="aleman" && idioma!=="ingles" && idioma !=="mandarin" || idioma === "undefined"){
+    return "Hola!";
   }
-  if (idioma ==="mandarin") {
-    return "Ni Hao!";
-    }
-  if (idioma==="ingles") {
-    return "Hello";
-    }
-    else
-    {
-      if (idioma==!"aleman" && idioma ==!"mandarin" && idioma==!"ingles" || idioma=== undefined) {
-        return "Hola!"
+  else{
+       if (idioma ==="mandarin") {
+        return "Ni Hao!";
+         }
+         else{
+              if (idioma==="ingles") {
+               return "Hello!";
+              }
+              else{
+                   if (idioma==="aleman") {
+                     return "Guten Tag!";
+                   }
+                  }
+              }
       }
-    }
-
-  
 }
 
 function esDiezOCinco(numero) {
@@ -84,8 +85,25 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (true) {}
-
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return "fizzbuzz";
+  }else{
+     if (numero % 5===0) {
+      return "buzz";
+     }else{
+        if (numero % 3 === 0 ) {
+         return "fizz";
+        }
+        else{
+          if (numero % 3!==0 && numero % 5!==0 ) {
+          return numero;  
+          }
+          
+        }
+      }
+  
+  }
+}
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
@@ -106,5 +124,5 @@ module.exports = {
   estaEnRango,
   esEntero,
   fizzBuzz,
-  esPrimo
-}
+  esPrimo,
+};
