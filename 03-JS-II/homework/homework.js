@@ -110,6 +110,18 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  var cantidadDeMultiplos = 0; 
+  if (numero === 0 || numero === 1) {
+    cantidadDeMultiplos = cantidadDeMultiplos + 2;
+  }else{
+      for (var i = 2 ; i <= numero; i++) {
+        if (numero % i ===0) {
+          cantidadDeMultiplos = cantidadDeMultiplos + 1;
+        }
+      }
+
+  }
+  return cantidadDeMultiplos < 2;
 }
 
 
